@@ -156,7 +156,8 @@ class BluetoothSDKImpl {
         readerCallback = null;
         unregisterReceiver();
 
-        BlueStateObserver.getInstance().destroy();
+        if (BlueStateObserver.getInstance() != null)
+            BlueStateObserver.getInstance().destroy();
     }
 
     /**

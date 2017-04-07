@@ -66,6 +66,11 @@ public class MainActivity extends AppCompatActivity {
         BluetoothSDK.connect(bluetoothDevice);
     }
 
+    public void checkConnect(View view) {
+
+        Log.i("check", ">>>>>>" + BluetoothSDK.isConnected());
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

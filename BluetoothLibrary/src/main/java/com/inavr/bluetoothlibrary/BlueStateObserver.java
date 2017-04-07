@@ -34,7 +34,7 @@ public class BlueStateObserver {
     }
 
     public void onDeviceFound(final BluetoothDevice bluetoothDevice) {
-        if (blueStateListener != null) {
+        if (blueStateListener != null && handler != null) {
             handler.post(new Runnable() {
                 @Override
                 public void run() {
@@ -45,7 +45,7 @@ public class BlueStateObserver {
     }
 
     public void onStateChange(final BlueState blueState) {
-        if (blueStateListener != null) {
+        if (blueStateListener != null && handler != null) {
 
             handler.post(new Runnable() {
                 @Override

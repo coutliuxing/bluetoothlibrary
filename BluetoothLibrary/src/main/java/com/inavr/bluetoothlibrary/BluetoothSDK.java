@@ -72,7 +72,7 @@ public class BluetoothSDK {
         bluetoothSDK.openBlueSetting();
     }
 
-    public static void isConnected() {
-        bluetoothSDK.isConnected();
+    public static boolean isConnected() {
+        return bluetoothSDK.isConnected();
     }
 }

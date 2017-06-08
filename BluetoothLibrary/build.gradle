@@ -7,7 +7,7 @@ if (isDebug.toBoolean()) {
 
 android {
     compileSdkVersion 23
-    buildToolsVersion '25.0.2'
+    buildToolsVersion '23.0.3'
     defaultConfig {
         if (isDebug.toBoolean()) {
             applicationId "com.inavr.bluetoothlibrary"

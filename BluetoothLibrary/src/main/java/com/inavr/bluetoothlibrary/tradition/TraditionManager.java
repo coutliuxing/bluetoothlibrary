@@ -168,7 +168,29 @@ public class TraditionManager implements IBlueManager {
         BluetoothSocket temp = null;
         try {
             Method m = device.getClass().getMethod("createRfcommSocket", new Class[]{int.class});
-            temp = (BluetoothSocket) m.invoke(device, 1);// 这里端口为1
+            temp = (BluetoothSocket) m.invoke(device, 29);// 这里端口为1
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        return temp;
+    }
+
+    //建立蓝牙通信
+    public BluetoothSocket getBluetoothSocket(BluetoothDevice device, int port) {
+        if (device == null)
+            return null;
+        BluetoothSocket temp = null;
+        try {
+            Method m = device.getClass().getMethod("createRfcommSocket", new Class[]{int.class});
+            temp = (BluetoothSocket) m.invoke(device, port);// 这里端口为1
         } catch (SecurityException e) {
             e.printStackTrace();
         } catch (NoSuchMethodException e) {

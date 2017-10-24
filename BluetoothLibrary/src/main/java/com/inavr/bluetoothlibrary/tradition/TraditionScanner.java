@@ -79,6 +79,7 @@ public class TraditionScanner extends Scanner {
         //蓝牙配对
         intentFilter.addAction(BluetoothDevice.ACTION_FOUND);
         intentFilter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
+        intentFilter.addAction(BluetoothDevice.ACTION_UUID);
 
         context.registerReceiver(bluetoothBroadcastReceiver, intentFilter);
     }

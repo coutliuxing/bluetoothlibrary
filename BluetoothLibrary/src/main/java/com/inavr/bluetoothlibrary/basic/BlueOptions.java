@@ -13,7 +13,7 @@ import java.lang.annotation.RetentionPolicy;
 public class BlueOptions implements Parcelable {
 
     public int connectMode = ConnectMode.AUTO_CONNECT;
-    public int timeout = 5 * 1000;
+    public int timeout = 15 * 1000;
     public int scanType = ScanType.Tradition;
     public int connectType = ConnectType.Tradition;
     public int isRomote = 0;//1-true 0 - false
